@@ -6,10 +6,15 @@
     <title>FREE D</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/olesnice.json", {onProgress: UnityProgress});
+      UnityLoader.instantiate(
+        "unityContainer", 
+        "Build/www.json",  
+        {
+          Module: { "webglContextAttributes": {"preserveDrawingBuffer": true} }
+        }
+      );
     </script>
   </head>
   <body style="height: 100vh; position: relative; margin: 0; padding: 0;">
